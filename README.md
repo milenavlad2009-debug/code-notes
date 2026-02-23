@@ -65,3 +65,25 @@ The HTML boilerplate is the basic structure that every HTML document should have
     <!-- content goes here -->
 </body>
 </html>
+
+
+
+
+### UTF-8 (24 February 2026)
+
+<meta charset="UTF-8"> tells the browser to use UTF-8 character encoding.
+
+Why it's important:
+- Supports all languages (English, Romanian, Russian, Ukrainian, etc.)
+- Supports emojis and special symbols
+- Prevents mojibake (garbage text like "ÐÑÐ¸Ð²ÐµÑ")
+
+Where to put it:
+Inside <head>, before <title>.
+
+Example:
+```html
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+</head>
