@@ -47,3 +47,21 @@ Example:
   <h1>Hello</h1>
 </body>
 </html>
+
+
+### HTML Boilerplate (24 February 2026)
+
+The HTML boilerplate is the basic structure that every HTML document should have.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- content goes here -->
+</body>
+</html>
