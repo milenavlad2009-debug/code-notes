@@ -395,5 +395,108 @@ Summary for myself:
 `
 
 ---
+---
+## HTML Audio and Video Elements (24 February 2026)
 
+### What are they?
+
+The `<audio>` and `<video>` elements are used to embed **media files** directly into a webpage without needing third‑party plugins (like Flash).
+
+---
+
+### The `<video>` element
+
+**Basic syntax:**
+```html
+<video src="movie.mp4" controls>
+  Your browser does not support the video tag.
+</video>
+
+Common attributes:
+
+Attribute Description
+src Path to the video file
+controls Shows play/pause/volume/fullscreen buttons
+autoplay Video starts playing automatically (often blocked by browsers)
+loop Video repeats after it ends
+muted Mutes the audio by default
+poster Image shown while video is loading
+width / height Sets dimensions (in pixels)
+
+Example with multiple sources (better compatibility):
+<video controls width="400">
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.webm" type="video/webm">
+  <p>Your browser doesn't support video. <a href="movie.mp4">Download it</a>.</p>
+</video>
+
+---
+
+The <audio> element
+
+Basic syntax:
+<audio src="song.mp3" controls>
+  Your browser does not support the audio element.
+</audio>
+
+Common attributes:
+
+Attribute Description
+src Path to the audio file
+controls Shows play/pause/volume buttons
+autoplay Starts playing automatically (usually blocked)
+loop Repeats the audio
+muted Starts muted
+preload Hint how much to download (none, metadata, auto)
+
+Example with multiple sources:
+<audio controls>
+  <source src="song.mp3" type="audio/mpeg">
+  <source src="song.ogg" type="audio/ogg">
+  <p>Your browser doesn't support audio. <a href="song.mp3">Download</a>.</p>
+</audio>
+
+---
+
+Supported formats
+
+Browser Video Audio
+Chrome MP4, WebM, Ogg MP3, WAV, Ogg
+Firefox MP4, WebM, Ogg MP3, WAV, Ogg
+Safari MP4 (H.264) only MP3, MP4 audio
+
+Best practice: always provide at least MP4 (video) and MP3/OGG (audio) + a fallback message.
+
+---
+
+Important rules
+
+· Always include the controls attribute, otherwise the user can't start playback
+· Don't rely on autoplay – browsers block it if there's sound
+· Use the <source> element inside <video>/<audio> for multiple file formats
+· Provide a fallback text for very old browsers
+· For accessibility, add captions/subtitles (using the <track> element)
+
+---
+
+Example with <track> (subtitles)
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  <track src="subtitles_ro.vtt" kind="subtitles" srclang="ro" label="Română">
+</video>
+
+---
+
+Summary for myself
+
+· Use <video> and <audio> to embed media
+· Always include controls
+· Provide multiple source formats for compatibility
+· Use muted + autoplay if you really want auto‑play video
+· Subtitles go in <track> inside the media element
+
+`
+
+---
 
