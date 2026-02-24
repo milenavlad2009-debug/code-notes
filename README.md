@@ -500,3 +500,135 @@ Summary for myself
 
 ---
 
+---
+## Media Optimisation, Image Licences & SVGs (24 February 2026)
+
+### What are common ways to optimise media assets?
+
+Optimising media (images, video, audio) means making files **smaller** without losing too much quality. This makes websites load faster.
+
+**For images:**
+- Use the right format:
+  - **JPEG** – photos, complex images
+  - **PNG** – graphics with transparency, logos
+  - **WebP** – modern format, smaller than JPEG/PNG (supported in most browsers)
+  - **AVIF** – even smaller, but newer
+- Compress images:
+  - Tools: TinyPNG, Squoosh, ImageOptim
+  - Or use CMS plugins that auto-compress
+- Resize images to the actual size needed on the page (don't load a 4000px image for a 200px thumbnail)
+- Use **responsive images** with `srcset`:
+
+```html
+<img src="small.jpg"
+     srcset="medium.jpg 1000w, large.jpg 2000w"
+     alt="description">
+
+For video/audio:
+
+· Compress with tools like HandBrake (video) or Audacity (audio)
+· Use modern formats: MP4 (H.264/HEVC), WebM for video; MP3, AAC for audio
+· Consider streaming instead of embedding large files
+· Lazy load media that's not immediately visible
+
+For fonts:
+
+· Use only the font weights you need
+· Consider system fonts if possible
+· Use font-display: swap to avoid invisible text
+
+---
+
+What are the different types of image licence, and how do they work?
+
+When you use images that aren't yours, you need to understand the licence.
+
+1. Public Domain
+
+· No copyright, free to use for anything
+· Examples: very old art, works released into public domain by author
+
+2. Royalty-Free
+
+· Pay once, use many times (but terms vary)
+· You don't own the image, just have a licence to use it
+· Examples: Shutterstock, iStock, Unsplash (Unsplash is free)
+
+3. Rights-Managed
+
+· You pay for specific use (time, place, medium)
+· More expensive, more control for the creator
+
+4. Creative Commons (CC)
+Free licences with different conditions:
+
+Licence What you can do Conditions
+CC0 Anything, no attribution needed None
+CC BY Use, modify, even commercially Must credit the creator
+CC BY-SA Use, modify, share Credit + share under same licence
+CC BY-ND Use, but no modifications Credit + no changes
+CC BY-NC Use, modify, but non‑commercial only Credit
+CC BY-NC-SA Non‑commercial, share alike Credit + same licence
+CC BY-NC-ND Non‑commercial, no changes Most restrictive
+
+How to check:
+
+· Look for licence text on the website where you found the image
+· Common sources: Unsplash (CC0), Flickr (filter by licence), Wikimedia Commons
+
+---
+
+What are SVGs, and when should you use them?
+
+SVG = Scalable Vector Graphics
+
+Unlike JPEG/PNG (which are made of pixels), SVGs are made of maths – lines, curves, shapes.
+
+Advantages:
+
+· Infinite scaling – they stay sharp at any size
+· Small file size (for simple graphics)
+· Can be styled with CSS and manipulated with JavaScript
+· Animated
+· Editable in code or vector tools (Illustrator, Figma, Inkscape)
+
+When to use SVGs:
+
+· Logos
+· Icons
+· Illustrations
+· Charts / diagrams
+· Any graphic that needs to be sharp on all screens
+
+When NOT to use SVGs:
+
+· Complex photos (JPEG/WebP are better)
+· Very detailed images with thousands of paths (file can get huge)
+
+How to use SVG in HTML:
+
+Inline (editable with CSS/JS):
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" fill="red" />
+</svg>
+
+As an image:
+<img src="logo.svg" alt="Logo">
+
+As a background in CSS:
+.logo {
+  background-image: url('logo.svg');
+}
+
+Summary for myself:
+
+· Use SVG for logos, icons, simple graphics
+· Use JPEG/WebP for photos
+· Use srcset to serve different sizes
+· Always check the licence before using someone else's image
+· Compress everything to make my sites fast
+
+`
+
+---
+
