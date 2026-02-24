@@ -314,5 +314,86 @@ Summary for myself:
 · Use external .js files for larger projects and reusability
 · Place scripts at the bottom of <body> for better performance
 · Use defer when script needs to run after page loads
+----
+
+---
+## Meta Description & Open Graph Tags (24 February 2026)
+
+### What is the role of the meta description, and how does it affect SEO?
+
+The **meta description** is an HTML attribute that provides a **brief summary** of a webpage's content. It appears under the page title in search engine results.
+
+**Example:**
+```html
+<head>
+  <meta name="description" content="Learn about bioengineering, neuroengineering, and how to apply to top universities in Korea and the USA.">
+</head>
+
+How it affects SEO:
+
+· It doesn't directly improve rankings, but it increases click-through rate (CTR)
+· A good description makes people want to click on your link
+· Should be unique for each page
+· Ideal length: 150–160 characters
+· Include relevant keywords naturally
+
+Best practices:
+
+· Write for humans first, search engines second
+· Include a call to action (e.g., "Learn more", "Apply now")
+· Don't duplicate descriptions across pages
+· Avoid generic text like "Welcome to my website"
+
+---
+
+What is the role of open graph tags, and how do they affect SEO?
+
+Open Graph (OG) tags are special meta tags that control how your webpage appears when shared on social media platforms (Facebook, LinkedIn, Twitter, etc.).
+
+Example:
+<head>
+  <meta property="og:title" content="My Bioengineering Portfolio">
+  <meta property="og:description" content="Projects, notes, and journey to becoming a bioengineer">
+  <meta property="og:image" content="https://mywebsite.com/preview.jpg">
+  <meta property="og:url" content="https://mywebsite.com">
+  <meta property="og:type" content="website">
+</head>
+
+How they affect SEO:
+
+· They don't directly improve Google rankings
+· But they improve social sharing → more traffic → better engagement → indirect SEO benefit
+· They make your site look professional and trustworthy
+
+Common OG tags:
+
+Tag Purpose
+og:title Title of the page (when shared)
+og:description Short description for social media
+og:image Image shown in the share preview
+og:url Canonical URL of the page
+og:type Type of content (website, article, etc.)
+
+Twitter also uses its own tags:
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="...">
+<meta name="twitter:description" content="...">
+<meta name="twitter:image" content="...">
+
+Why they matter:
+
+· Without OG tags, social platforms just guess what to show
+· With OG tags, you control how your site looks when shared
+· Better preview = more clicks = more visibility
+
+Summary for myself:
+
+· Use meta description to get people to click from Google
+· Use Open Graph tags to control how my site looks on social media
+· Both are easy to add and make my site look professional
+
+`
+
+---
 
 
