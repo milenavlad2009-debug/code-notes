@@ -632,3 +632,98 @@ Summary for myself:
 
 ---
 
+---
+## Replaced Elements & Iframe Embeds (24 February 2026)
+
+### What are replaced elements, and what are some examples?
+
+**Replaced elements** are HTML elements whose content is **replaced by an external resource** (like an image, video, or embedded document). The browser doesn't render their content directly from the HTML — it replaces them with something else.
+
+**Characteristics:**
+- They have intrinsic dimensions (width, height) that come from the external resource
+- They can be styled with CSS, but their internal content is outside the scope of the HTML document
+- They behave differently from normal elements (e.g., `img` can be resized without losing quality if vector)
+
+**Common examples of replaced elements:**
+
+| Element | What it does |
+|---------|--------------|
+| `<img>` | Displays an image from an external source |
+| `<video>` | Embeds a video file |
+| `<audio>` | Embeds an audio file |
+| `<iframe>` | Embeds another HTML page |
+| `<embed>` | Embeds external content (like a PDF) |
+| `<object>` | Embeds external resources (deprecated in many cases) |
+| `<input type="image">` | An image that acts as a submit button |
+
+**Example:**
+```html
+<img src="photo.jpg" alt="A replaced element">
+<video controls>
+  <source src="movie.mp4" type="video/mp4">
+</video>
+<iframe src="https://example.com"></iframe>
+
+Note: CSS properties like ::before and ::after don't work on replaced elements because they don't have a "content" box in the same way.
+
+---
+
+How do you embed videos onto your page using the iframe element?
+
+The <iframe> (inline frame) element is used to embed another HTML page inside your current page. This is how you embed YouTube, Vimeo, or other external videos.
+
+Basic syntax:
+<iframe src="URL" width="560" height="315"></iframe>
+
+Example embedding a YouTube video:
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+
+Common attributes:
+
+Attribute Purpose
+src The URL of the page to embed (for YouTube, use the embed link: https://www.youtube.com/embed/VIDEO_ID)
+width / height Size of the iframe in pixels
+title Accessibility – describes the content
+allow Controls what the iframe can do (fullscreen, camera, etc.)
+allowfullscreen Allows the video to go fullscreen
+frameborder Removes border (0 = no border, deprecated but still used)
+loading="lazy" Delays loading until the iframe is near the viewport (better performance)
+
+Responsive iframe trick (keeps aspect ratio):
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/..."
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          allowfullscreen>
+  </iframe>
+</div>
+
+(56.25% = 16:9 aspect ratio)
+
+Where to get embed codes:
+
+· YouTube: Share → Embed → copy <iframe> code
+· Vimeo: Share → Embed → copy
+· Other platforms usually have similar options
+
+Security tip:
+Only embed from trusted sources. Malicious iframes can harm your users.
+
+---
+
+Summary for myself:
+
+· Replaced elements = content from outside (images, videos, iframes)
+· Use <iframe> to embed videos from YouTube, Vimeo, etc.
+· Always use title for accessibility
+· Make iframes responsive with the padding trick
+· Check embed options on the video platform
+
+`
+
+---
