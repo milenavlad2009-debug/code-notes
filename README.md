@@ -727,3 +727,124 @@ Summary for myself:
 `
 
 ---
+
+
+
+DAY 3
+
+
+
+---
+## Semantic HTML – Why It Matters (25 February 2026)
+
+### Why should you care about semantic HTML?
+
+Semantic HTML means using **meaningful tags** that describe the **content** inside them, not just how it looks.
+
+Examples: `<header>`, `<footer>`, `<article>`, `<section>`, `<nav>` instead of generic `<div>`.
+
+**Why it matters:**
+
+| Reason | Explanation |
+|--------|-------------|
+| **Accessibility** | Screen readers and assistive technologies rely on semantic tags to navigate the page. Blind users can jump from `<main>` to `<nav>` to `<article>` easily. |
+| **SEO** | Search engines (Google) understand the structure better. They know what's the main content, what's navigation, what's an article. This can improve ranking. |
+| **Readability** | Your code becomes easier to read and maintain. Other developers (or future you) will instantly understand the purpose of each section. |
+| **Future-proofing** | Browsers and standards evolve, but semantic tags are built to last. |
+| **Styling** | You can target semantic elements with CSS without adding extra classes (e.g., `article p` vs `.article p`). |
+
+---
+
+### Why is it important to have good structural hierarchy?
+
+Good structural hierarchy means using headings (`<h1>` to `<h6>`) in a **logical order** and nesting content properly.
+
+**Why it matters:**
+
+- **Accessibility:** Screen readers use headings to create an outline of the page. Users can jump from section to section. If headings are out of order (e.g., `<h3>` right after `<h1>`), it's confusing.
+- **SEO:** Search engines give more weight to content under higher‑level headings.
+- **Readability:** A clear hierarchy makes the page easier to scan for humans too.
+- **Maintainability:** When you come back to your code, the structure tells you what's important.
+
+**Example of bad hierarchy:**
+```html
+<h1>Main Title</h1>
+<h3>Subsection</h3>  <!-- skipped h2 -->
+<h4>Details</h4>     <!-- skipped h3 -->
+
+Good hierarchy:
+<h1>Main Title</h1>
+<h2>Subsection</h2>
+<h3>Details</h3>
+
+---
+
+What is the difference between presentational and semantic HTML?
+
+Presentational HTML (old way) uses tags that describe how things look, not what they mean.
+
+Examples:
+
+· <font> – sets font size/color (obsolete)
+· <center> – centers content (obsolete)
+· <b> – makes text bold (presentational)
+· <i> – makes text italic (presentational)
+· <br> – line break (presentational, but still used)
+· <hr> – horizontal rule (presentational)
+
+Semantic HTML uses tags that describe the meaning of the content.
+
+Examples:
+
+· <strong> – indicates strong importance (usually bold, but meaning is "important")
+· <em> – indicates emphasis (usually italic, but meaning is "emphasized")
+· <header>, <footer>, <article>, <section> – describe page structure
+· <nav> – navigation links
+· <main> – main content of the page
+· <aside> – sidebar or related content
+· <figure>, <figcaption> – images with captions
+
+Key difference:
+
+Presentational Semantic
+<b> <strong>
+<i> <em>
+<div class="header"> <header>
+<div class="nav"> <nav>
+Describes appearance Describes meaning
+Bad for accessibility Good for accessibility
+Old, often obsolete Modern, recommended
+
+Example:
+
+Presentational:
+<div class="header">
+  <div class="title">My Blog</div>
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </div>
+</div>
+
+Semantic:
+<header>
+  <h1>My Blog</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </nav>
+</header>
+
+---
+
+Summary for myself:
+
+· Use semantic tags whenever possible – they make my site accessible, SEO‑friendly, and maintainable
+· Keep a logical heading hierarchy (h1 → h2 → h3...)
+· Avoid old presentational tags like <font>, <center>; use CSS for styling
+· Semantic HTML is about meaning, not appearance
+· Screen readers and Google will thank me 😊
+
+`
+
+---
