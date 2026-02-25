@@ -966,3 +966,135 @@ Summary for myself:
 `
 
 ---
+---
+## HTML – Quotes, Abbreviations, Addresses, and Dates (25 February 2026)
+
+### How Do Block and Inline Quotes Work in HTML?
+
+HTML has two types of quotes: **block quotes** (for long quotations) and **inline quotes** (for short, in‑text quotes).
+
+**1. Block Quotes (`<blockquote>`)**
+
+Used for longer quotations that should be displayed as a separate block.
+
+**Example:**
+```html
+<blockquote cite="https://example.com/source">
+  <p>The only limit to our realization of tomorrow is our doubts of today.</p>
+  <footer>— Franklin D. Roosevelt</footer>
+</blockquote>
+
+· The cite attribute can contain the URL of the source (optional)
+· Browsers usually indent <blockquote> by default
+· You can add a <footer> or <cite> inside to credit the author
+
+2. Inline Quotes (<q>)
+
+Used for short quotations that are part of a sentence.
+
+Example:
+<p>As Marie Curie said, <q>Nothing in life is to be feared, it is only to be understood.</q></p>
+
+· Browsers automatically add quotation marks around the text
+· Some browsers add language‑specific quotes (e.g., « » for French)
+
+Difference:
+
+<blockquote> <q>
+Long quotations Short, inline quotations
+Displayed as a separate block Displayed inside a sentence
+No automatic quotes Automatic quotes added
+Can have cite attribute Can have cite attribute too
+
+---
+
+How Do You Display Abbreviations in HTML?
+
+Use the <abbr> element to mark up abbreviations or acronyms.
+
+Example:
+<p><abbr title="HyperText Markup Language">HTML</abbr> is the standard language for web pages.</p>
+
+· The title attribute expands the abbreviation (appears on hover)
+· Screen readers can announce the full form when the title is present
+· Good for accessibility and SEO
+
+Common use cases:
+
+· Technical terms (HTML, CSS, JS)
+· Organizations (NASA, WHO, FBI)
+· Units (kg, cm, mph)
+
+Note: For very common abbreviations (like "e.g." or "i.e."), you don't always need <abbr>, but it's still a nice touch.
+
+---
+
+How Do You Display Addresses in HTML?
+
+Use the <address> element to mark up contact information for a person, organization, or page.
+
+Example:
+<address>
+  Written by <a href="mailto:milena@example.com">Milena Vlad</a><br>
+  Bucharest, Romania<br>
+  Phone: +40 123 456 789
+</address>
+
+What <address> is for:
+
+· Physical addresses
+· Email addresses
+· Phone numbers
+· Social media links (if relevant)
+· Author information
+
+What <address> is NOT for:
+
+· Postal addresses that are just data (use a <p> or a custom class instead)
+· Every address on the page – only the one that is relevant to the document (author, contact)
+
+Styling: Usually displayed in italics by default, but you can change it with CSS.
+
+---
+
+How Do You Display Times and Dates in HTML?
+
+Use the <time> element to mark up dates, times, or durations in a machine‑readable format.
+
+Example:
+<p>The conference starts on <time datetime="2026-10-15">October 15, 2026</time>.</p>
+
+<p>The event is at <time datetime="20:00">8:00 PM</time>.</p>
+
+<p>The course takes <time datetime="P6W">6 weeks</time> to complete.</p>
+
+The datetime attribute:
+
+· Uses the ISO 8601 format
+· For dates: YYYY-MM-DD (e.g., 2026-10-15)
+· For times: HH:MM:SS (e.g., 20:00)
+· For durations: P[n]Y[n]M[n]DT[n]H[n]M[n]S (e.g., P6W = 6 weeks, P1D = 1 day)
+
+Why use <time>?
+
+· Accessibility: Screen readers can announce dates consistently
+· SEO: Search engines understand the date better
+· Browsers: Can offer calendar integration, reminders, etc.
+· Semantic: Clearly marks content as a date/time
+
+Example with both date and time:
+<p>The webinar is on <time datetime="2026-11-05T15:00">November 5 at 3:00 PM</time>.</p>
+
+---
+
+Summary for myself:
+
+· Use <blockquote> for long quotes, <q> for short inline quotes
+· <abbr> with title explains abbreviations (great for accessibility)
+· <address> = contact info for the page/author (not just any address)
+· <time> with datetime makes dates machine‑readable (SEO, accessibility, future‑proof)
+· All these tags make my HTML more semantic and useful
+
+`
+
+---
