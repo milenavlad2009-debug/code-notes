@@ -848,3 +848,121 @@ Summary for myself:
 `
 
 ---
+
+
+---
+## Semantic HTML – Emphasis, Strong, and Description Lists (25 February 2026)
+
+### When Should You Use the Emphasis Element (`<em>`) Over the Idiomatic Text Element (`<i>`)?
+
+Both `<em>` and `<i>` usually make text **italic**, but they have different meanings.
+
+| Element | Meaning | When to use |
+|---------|---------|-------------|
+| `<em>` | **Emphasis** – stress emphasis on a word or phrase | When you want to change the meaning of a sentence by stressing a word. Screen readers will read it with emphasis. |
+| `<i>` | **Idiomatic text** – text that is set off from the normal prose (technical terms, foreign words, thoughts, etc.) | When the text is just stylistically different, but not emphasized. |
+
+**Examples:**
+
+```html
+<p>I <em>really</em> need to finish this project.</p>
+<!-- Means: "I REALLY need to finish this" (strong feeling) -->
+
+<p>The word <i>aloha</i> means both hello and goodbye.</p>
+<!-- Foreign word, no emphasis -->
+
+Rule of thumb:
+
+· If the meaning changes with stress → <em>
+· If it's just a convention (foreign word, thought, technical term) → <i>
+
+---
+
+When Should You Use the Strong Element (<strong>) Over the Bring Attention To Element (<b>)?
+
+Both <strong> and <b> usually make text bold, but they have different purposes.
+
+Element Meaning When to use
+<strong> Strong importance – the content is very important (serious, urgent) For warnings, alerts, key points. Screen readers may announce it with stronger tone.
+<b> Bring attention – stylistically different, but not important For keywords, product names, or any text you just want to highlight without implying importance.
+
+Examples:
+<p><strong>Warning:</strong> Do not touch the hot surface.</p>
+<!-- Important, urgent -->
+
+<p>This phone is available in <b>midnight blue</b> and <b>starlight</b>.</p>
+<!-- Just highlighting color names, no extra importance -->
+
+Rule of thumb:
+
+· If the text is truly important (safety, key message) → <strong>
+· If you just want it to stand out visually → <b> (and use CSS for styling)
+
+---
+
+What Are Description Lists, and When Should You Use Them?
+
+Description lists (<dl>) are used for lists of terms and their descriptions (like a dictionary, FAQ, or metadata).
+
+Structure:
+
+· <dl> – the list container
+· <dt> – term (definition term)
+· <dd> – description (definition description)
+
+Example:
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language – the structure of web pages.</dd>
+
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets – the styling of web pages.</dd>
+
+  <dt>JavaScript</dt>
+  <dd>A programming language that adds interactivity to web pages.</dd>
+</dl>
+
+When to use them:
+
+· Glossaries / dictionaries
+· FAQs (question as <dt>, answer as <dd>)
+· Metadata (e.g., author, date, genre)
+· Any list of name-value pairs
+
+Example (metadata for a recipe):
+<dl>
+  <dt>Prep time</dt>
+  <dd>15 minutes</dd>
+
+  <dt>Cook time</dt>
+  <dd>30 minutes</dd>
+
+  <dt>Servings</dt>
+  <dd>4</dd>
+</dl>
+
+Why use them?
+
+· Semantic – they clearly describe the relationship between terms and descriptions
+· Accessibility – screen readers can navigate them properly
+· Styling – you can target <dt> and <dd> separately with CSS
+
+Don't use <dl> for:
+
+· Simple lists of items (use <ul> or <ol>)
+· Dialogues (use <p> or other tags)
+
+---
+
+Summary for myself:
+
+· <em> = stress emphasis (changes meaning)
+· <i> = idiomatic / foreign / technical (just style)
+· <strong> = serious importance
+· <b> = visual attention only
+· <dl> + <dt> + <dd> = perfect for glossaries, FAQs, metadata
+· Always choose meaning over appearance – that's semantic HTML!
+
+`
+
+---
