@@ -1279,3 +1279,46 @@ DAY 4
 
 
 ---
+· Accessibility: Disabled/read‑only fields are announced differently by screen readers
+· User experience: Visual feedback (e.g., red border for invalid fields) helps users correct mistakes
+· Functionality: disabled fields are ignored by the server, readonly fields are sent
+
+Styling example:
+input:invalid {
+  border: 2px solid red;
+}
+input:valid {
+  border: 2px solid green;
+}
+input:focus {
+  outline: 2px solid blue;
+}
+
+Example with states:
+<form>
+  <label for="email">Email (required):</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="bio">Bio (read‑only):</label>
+  <input type="text" id="bio" name="bio" value="Already set" readonly>
+
+  <label for="coupon">Coupon (disabled):</label>
+  <input type="text" id="coupon" name="coupon" value="SAVE10" disabled>
+
+  <button type="submit">Submit</button>
+</form>
+
+---
+
+Summary for myself:
+
+· Forms collect user input
+· Labels + for/id make forms accessible
+· Input types choose the right keyboard/mode for each data type
+· Validation (required, pattern, min/max) gives instant feedback
+· States (disabled, readonly, :valid, :invalid) control interaction and styling
+· Always validate on the server too – client‑side is just for UX
+
+`
+
+---
