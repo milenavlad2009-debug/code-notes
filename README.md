@@ -1189,3 +1189,86 @@ pre {
 }
 
 ---
+What Are the <u>, <s>, and <ruby> Elements Used For, and How Do They Work?
+
+1. <u> (Unarticulated Annotation)
+
+Used for text that is stylistically different but not emphasized or important. Often displayed as underlined.
+
+Common uses:
+
+· Misspelled words
+· Proper names in some languages
+· Any text that needs to be underlined without implying importance
+
+Example:
+<p>This word is <u>misspelled</u>.</p>
+
+Note: Don't use <u> just to underline text (use CSS text-decoration: underline instead). Use it when the underlining has meaning.
+
+---
+
+2. <s> (Strikethrough)
+
+Represents text that is no longer accurate or relevant. Displayed with a line through it.
+
+Common uses:
+
+· Old prices in sales
+· Completed tasks
+· Corrections
+
+Example:
+<p>Original price: <s>$100</s> Now: $50</p>
+
+Note: <s> is for content that is no longer correct. For edits in a document, use <del> and <ins>.
+
+---
+
+3. <ruby> (Ruby Annotations)
+
+Used for small annotations above or next to text, common in East Asian languages (like furigana in Japanese or pinyin in Chinese).
+
+Structure:
+
+· <ruby> – container
+· <rb> – base text (optional in modern HTML)
+· <rt> – ruby text (the annotation)
+· <rp> – parentheses for browsers that don't support ruby
+
+Example (Japanese):
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+
+Example (Chinese pinyin):
+<ruby>
+  你 <rp>(</rp><rt>nǐ</rt><rp>)</rp>
+  好 <rp>(</rp><rt>hǎo</rt><rp>)</rp>
+</ruby>
+
+How it looks:
+
+· In supported browsers: small text above the base characters
+· In older browsers: the fallback rp shows parentheses around the annotation
+
+When to use:
+
+· Language learning content
+· Proper pronunciation guides
+· Any text where you need small annotations
+
+---
+
+Summary for myself:
+
+· Use <sub> and <sup> for simple formulas; MathML for complex ones
+· <code>, <pre>, <kbd>, <samp>, <var> make code readable and semantic
+· <u> = underlined but not important (use CSS for generic underlines)
+· <s> = strikethrough for outdated content
+· <ruby> + <rt> = annotations for East Asian languages (or any small notes)
+
+`
+
+---
