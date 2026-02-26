@@ -1098,3 +1098,94 @@ Summary for myself:
 `
 
 ---
+---
+## HTML – Math, Code, Styling, and Annotations (26 February 2026)
+
+### How Do You Display Mathematical Equations and Chemical Formulas in HTML?
+
+For simple formulas, you can use **subscript** (`<sub>`) and **superscript** (`<sup>`). For complex equations, consider **MathML**.
+
+**1. Subscript (`<sub>`) and Superscript (`<sup>`)**
+
+| Element | Use |
+|---------|-----|
+| `<sub>` | Subscript (H₂O, CO₂) |
+| `<sup>` | Superscript (x², E=mc²) |
+
+**Examples:**
+```html
+<p>H<sub>2</sub>O – water</p>
+<p>E = mc<sup>2</sup> – Einstein's equation</p>
+<p>x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup> – Pythagorean theorem</p>
+
+2. Chemical formulas
+<p>CO<sub>2</sub> – carbon dioxide</p>
+<p>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> – glucose</p>
+<p>Na<sup>+</sup> and Cl<sup>-</sup> – ions</p>
+
+3. MathML (for complex equations)
+
+MathML is a special language for mathematical notation.
+
+Example:
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <msup>
+    <mi>y</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <msup>
+    <mi>z</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+
+Note: MathML is powerful but verbose. For most web use, <sub>/<sup> + Unicode symbols (√, ∫, ∑, π) are enough.
+
+---
+
+How Do You Represent Computer Code in HTML?
+
+HTML provides several elements for displaying code, each with a specific meaning.
+
+Element Purpose Example
+<code> Inline code <code>print()</code>
+<pre> Preformatted text (preserves spaces/line breaks) <pre>function() { ... }</pre>
+<kbd> Keyboard input <kbd>Ctrl + C</kbd>
+<samp> Sample output from a program <samp>Error: file not found</samp>
+<var> Variable name in math/programming <var>x</var> = 5
+
+Examples:
+<p>Use the <code>console.log()</code> function to print to the console.</p>
+
+<pre>
+function hello() {
+  console.log("Hello, world!");
+}
+</pre>
+
+<p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
+
+<p>The program returned: <samp>Hello, world!</samp></p>
+
+<p>The equation <var>E</var> = <var>m</var><var>c</var><sup>2</sup> is famous.</p>
+
+Combining with CSS:
+You can style these elements to look like real code:
+code, pre {
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+}
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+---
